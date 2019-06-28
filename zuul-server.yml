@@ -1,2 +1,22 @@
 server:
   port: 80
+
+# 当前服务器是网关服务器,详细配置如下
+zuul:
+  host:
+    socket-timeout-millis: 60000  #zuul的socket超时设置
+    connect-timeout-millis: 60000 #zuul的connect超时设置
+  forceOriginalQueryStringEncoding: true #强制采用原始请求的编码格式，即不对Get请求参数做编解码
+
+# 路由规则
+  routes:
+    member-server-route:
+      path: /member/**
+      service-id: member-server
+      sensitive-headers:
+      custom-sensitive-headers: true
+      
+# 这个时间在这里配置的长一些,实际工作中可能不必要配置这么长
+ribbon:
+  ReadTimeout: 10000
+  ConnectTimeout: 10000
