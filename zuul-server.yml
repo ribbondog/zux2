@@ -22,6 +22,12 @@ zuul:
       sensitive-headers:
       custom-sensitive-headers: true
       
+    order-server-route:
+      path: /order/**
+      service-id: order-server
+      sensitive-headers:
+      custom-sensitive-headers: true
+      
 # 这个时间在这里配置的长一些,实际工作中可能不必要配置这么长
 ribbon:
   ReadTimeout: 10000
