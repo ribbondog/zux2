@@ -27,7 +27,7 @@ spring:
         default-fetch-size: 100
         default-statement-timeout: 3000
         map-underscore-to-camel-case: true
-
- 
-
-
+        
+logging:
+  level: 
+    cn.wolfcode.zux2: debug
