@@ -55,3 +55,7 @@ spring:
 logging:
   level:
     cn.wolfcode.shop: debug
+    
+feign:
+  hystrix:
+    enabled: true
