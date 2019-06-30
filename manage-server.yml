@@ -31,3 +31,7 @@ spring:
 logging:
   level: 
     cn.wolfcode.zux2: debug
+
+feign:
+  hystrix:
+    enabled: true
